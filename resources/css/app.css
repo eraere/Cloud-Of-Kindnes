@@ -1,0 +1,59 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+@layer base {
+    body {
+        @apply transition-colors duration-300;
+    }
+}
+
+@layer components {
+    .btn {
+        @apply px-4 py-2 rounded-full transition-colors duration-200;
+    }
+
+    .btn-primary {
+        @apply bg-purple-600 text-white hover:bg-purple-700;
+    }
+
+    .btn-secondary {
+        @apply bg-pink-600 text-white hover:bg-pink-700;
+    }
+
+    .card {
+        @apply bg-white rounded-xl shadow-lg p-6;
+    }
+
+    .scale-102 {
+        transform: scale(1.02);
+    }
+
+    #compliment-display {
+        @apply transition-all duration-300 ease-out;
+    }
+
+    .cloud1, .cloud2, .cloud3 {
+        @apply blur-lg;
+    }
+}
+
+@layer utilities {
+    .bg-clip-text {
+        -webkit-background-clip: text;
+        background-clip: text;
+    }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    @apply bg-black/20;
+}
+
+::-webkit-scrollbar-thumb {
+    @apply bg-gradient-to-b from-purple-600 via-pink-600 to-blue-600 rounded-full;
+}
